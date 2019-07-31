@@ -1,4 +1,4 @@
-package com.yunsom.mm.gateway.config;
+package com.study.feign.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,15 +17,15 @@ public class Swagger2 {
     return new Docket(DocumentationType.SWAGGER_2)
         .apiInfo(apiInfo())
         .select()
-        .apis(RequestHandlerSelectors.basePackage("com.yunsom.mm"))
+        .apis(RequestHandlerSelectors.basePackage("com.study.feign"))
         .paths(PathSelectors.any())
         .build();
   }
 
   private ApiInfo apiInfo() {
     return new ApiInfoBuilder()
-        .title("流程引擎")
-        .description("流程引擎网关restful接口")
+        .title("springcloud学习-feign")
+        .description("feign学习")
         .version("0.0.1")
         .build();
   }
